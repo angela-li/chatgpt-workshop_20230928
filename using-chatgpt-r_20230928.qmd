@@ -1,0 +1,307 @@
+---
+title: "Using ChatGPT and R for Effective Research and Teaching"
+subtitle: "tigeRs Lunch-n-Learn"
+author: "Angela Li"
+date: "September 28, 2023"
+format:
+  revealjs: 
+    theme: [default, custom.scss]
+    incremental: true
+editor: visual
+---
+
+## Welcome to tigeRs!
+
+-   Graduate-student-led Princeton R Group
+
+-   Sponsored by Data-Driven Social Science
+
+-   Co-organizers:
+
+    -   Kim (SPIA G2, DDSS Fellow)
+
+    -   Angela (SOC G4)
+
+## Our mission
+
+-   Teach and learn cutting-edge tools in R
+
+-   Focus on advanced topics:
+
+    -   reproducible research (version control, package development),
+
+    -   geospatial analysis,
+
+    -   text as data, LLMs,
+
+    -   new R packages,
+
+    -   Shiny dashboards
+
+    -   technical applications
+
+## Campus resources
+
+-   Many places at Princeton to pick up the basics of R:
+
+    1.  Exploring R at Princeton: <https://exploringr.princeton.edu/>
+
+    2.  Department-based trainings (ie SOC Methods Camp: <https://pusocmethodscamp.org/>)
+
+    3.  Stokes Library, DSS, Research Computing trainings, Wintersession coding bootcamps
+
+-   Folks in this room can direct you to the right resources!
+
+## R community + code of conduct
+
+-   We value behavior that promotes learning and allows everyone to have a positive experience
+
+-   R community places strong value on openness, kindness, and sharing knowledge
+
+    -   See: [rOpenSci code of conduct](https://ropensci.org/code-of-conduct/)
+
+    -   [RStudio code of conduct](https://rstudio-education.github.io/learner-personas/conduct/)
+
+## Upcoming tigeRs events
+
+-   **Zach Bleemer**: October 24 (historical document processing and OCR with R)
+
+-   **Arthur Spirling**: November 12 (text data and political speech, LLMs)
+
+-   Lunch-n-Learns
+
+-   Lightning talks!
+
+    -   Sign up here: <https://forms.gle/b9ShtGtRGTWhZDPK8>
+
+## Introduce yourself!
+
+-   To the person next to you:
+
+    -   Department / academic or policy interests
+
+    -   Have you used ChatGPT before? If so, how? If not, what do you know about it?
+
+    -   Why did you come to this talk?
+
+# A beginner's guide to ChatGPT
+
+## By the end of today...
+
+1.  Learn about how others are using ChatGPT in their work (and get inspired to try it out!)
+2.  Know some of the limitations of the tool
+3.  Hear about experience in the coding classroom
+
+## What I won't cover
+
+-   Detailed explanation of how LLMs work
+
+-   ChatGPT for non-code (ie writing) - will focus on it within R workflow.
+
+    -   Specifically for writing research code
+
+-   Ethics of ChatGPT
+
+-   Training LLMs for your own research
+
+## From skeptical to cautiously optimistic: my story
+
+-   **Spring 2023:** Heard about ChatGPT, skeptical of the hype, not sure what to use it for
+
+-   **Summer 2023:** Was encouraged by Matt Salganik to introduce it to students in Soc Methods Camp, explored it, learned more, got interested, started tentatively using in my own research
+
+-   **Fall 2023:** Want to introduce to more folks who might also be skeptical!
+
+## How'd I get from skeptic to booster?
+
+1.  Understand the tool
+
+2.  Understand the use cases
+
+3.  Understand the limitations
+
+## Understand the tool
+
+-   Large language models: predict the next word probabilistically
+
+-   Trained on text / code from the web
+
+    -   Wikipedia
+
+    -   StackOverflow
+
+    -   Github
+
+    -   etc.
+
+-   To predict the next word, need to develop some intermediate model or "understanding" of how things work in the human world
+
+## Some intuition
+
+-   Discuss:
+
+    -   Will ChatGPT give better code results for R, or for Stata?
+
+    -   Can ChatGPT help you learn an R package that came out this year?
+
+    -   Will ChatGPT be better at common or uncommon tasks?
+
+## Understand use cases
+
+-   Most useful things for ChatGPT
+
+    -   Debugging code
+
+    -   Providing starting points
+
+    -   Speeding up your workflow
+
+    -   **Translating ideas into code** (ie. when you don't know the code syntax)
+
+        -   Then, explain the code back to me!
+
+## Qualitative research: how do you use ChatGPT in your work?
+
+-   *"Paste all my code (or the relevant chunk) into ChatGPT along with the error message and ask it to suggest how to edit the code to fix the error.  I've had a fair amount of success with it helping me identify small typos in large batches of code." -Emily C, SOC PhD*
+
+-   *"Write out plain language comments describing what they want done (and perhaps the left side of the assignment, ie "data1 \<-" ) and then ask it to generate the rest." -Brandon S, SOC Prof*
+
+## Qualitative research: how do you use ChatGPT in your work?
+
+-   *I don't have any specific examples, but I tend to use it in a couple of ways. 1. Write functions 2. ask for speedups. 3. ask for rewrites. -Matt Salganik, SOC Prof*
+
+-   *"my one most useful use case for chatgpt for code thus far has been when i need to write a weird API call that uses packages and languages i'm not familiar with... and I can't figure it out. and even though chatgpt gets its wrong, its closer to right than mine" -Hunter Y, SOC PhD*
+
+# Try it out
+
+## Live demo
+
+-   Go to chat.open.ai.com
+
+-   Make an account
+
+-   Or watch me!
+
+## Understand use cases
+
+-   **...but also how to use ChatGPT well!**
+
+-   You still need to know how to ask correctly
+
+-   (True in life too)
+
+## Asking the right way
+
+-   How to ask good questions ("prompting ChatGPT")
+
+    -   Specify a persona
+
+    -   Specify relevant software
+
+    -   Provide context
+
+-   You can also look into **"prompt engineering"**
+
+## Sometimes, asking the question is enough in itself...
+
+-   *"Sometimes I don't even send the message because I know the answer by the time I've typed it, but for some reason typing it into a different place rather than as comments in my code helps me to think a bit differently." -Emily C, SOC PhD*
+
+-   *"the same thing happens to me w/ googling R questions tbh. Once I put the problem into concrete terms for other people to understand, I realize how to do it." -Chris F, SOC PHD*
+
+## How much do you need to know to ask good code questions?
+
+-   What the name of the problem is you're having
+
+-   What you're trying to do
+
+-   How you might go about doing that
+
+## Improve on these questions (prompts)
+
+-   Can you make a plot for me using the iris dataset?
+
+-   The error in R says the function isn't found. What's wrong?
+
+-   Can you write code that takes the top of my data and summarizes the trends?
+
+# Ok, but what are the limitations of the tool?
+
+## Things to keep in mind
+
+-   **Hallucinations:** you need to validate the code! (and know enough to do this)
+
+-   **Security and Privacy:** don't put restricted data into ChatGPT. Also, model is not open
+
+-   **Reproducibility:** same prompt gives different answers
+
+-   **Cutoff:** Knowledge "ends" in Sept 2021
+
+-   Other issues?
+
+# But you can still use it in novel and useful ways
+
+## Introducing ChatGPT for debugging for novice coders
+
+-   On Day 1 of bootcamp, we told students to use for debugging
+
+-   Since then...
+
+    -   Students have (cautiously) used it for debugging their code!
+
+    -   TAs have less to explain, because ChatGPT can explain!
+
+## Qualitative research: what did you think of how we used ChatGPT in camp?
+
+-   From the post-survey... 10 grads. What did folks think? (Split between positive and unsure)
+
+-   7 positive, 3 unsure
+
+-   My [Mastodon thread](https://fediscience.org/@angela/110978927977116008) reflecting on this
+
+## Qualitative research: what did you think of how we used ChatGPT in camp? (+ responses)
+
+-   *"I haven't seen another academic environment using the tool in such an open manner\...so it was nice"*
+
+-   *"I loved it! I definitely will continue using ChatGPT for coding. It really challenged me to put into words what I wanted to do\... as I was explaining to chatgpt\...I better understood it."*
+
+## Qualitative research: what did you think of how we used ChatGPT in camp? (- responses)
+
+-   *"I still feel like I'm not fully experienced enough to know when chatgpt is giving me a wrong answer\...chatgpt still intimidates me a little bit, but the introduction to it as a tool was helpful."*
+
+-   *I still don't fully understand how to use it, but I believe it benefitted others."*
+
+## What correlated with feelings toward ChatGPT?
+
+-   Experience with R (more experience, more + feelings)
+
+-   Experience with computation in general (more experience w computation, more + feelings)
+
+-   Previous background/discipline (skepticism of social scientists vs. acceptance of computer science folks)
+
+# Go forth and try it out!
+
+## More research: no free lunch
+
+-   Some time from now, will send you a tiny survey asking you if and how you've used ChatGPT
+
+    -   2 weeks
+
+    -   6 months
+
+-   Let me know!
+
+# Thanks for coming!
+
+## Upcoming tigeRs events
+
+-   **Zach Bleemer**: October 24 (historical document processing and OCR with R)
+
+-   **Arthur Spirling**: November 14 (text data and political speech, LLMs)
+
+-   Lunch-n-Learns
+
+-   Lightning talks!
+
+    -   Sign up here: <https://forms.gle/b9ShtGtRGTWhZDPK8>
+
+-   **Slides from talk** (made in Quarto!) will be sent out via email and posted openly
