@@ -66,7 +66,7 @@ editor: visual
 
 -   **Zach Bleemer**: October 24 (historical document processing and OCR with R)
 
--   **Arthur Spirling**: November 12 (text data and political speech, LLMs)
+-   **Arthur Spirling**: November 14 (text data and political speech, LLMs)
 
 -   Lunch-n-Learns
 
@@ -164,7 +164,7 @@ editor: visual
 
 -   *"Paste all my code (or the relevant chunk) into ChatGPT along with the error message and ask it to suggest how to edit the code to fix the error.  I've had a fair amount of success with it helping me identify small typos in large batches of code." -Emily C, SOC PhD*
 
--   *"Write out plain language comments describing what they want done (and perhaps the left side of the assignment, ie "data1 \<-" ) and then ask it to generate the rest." -Brandon S, SOC Prof*
+-   *"Write out plain language comments describing what they want done (and perhaps the left side of the assignment, ie"data1 \<-" ) and then ask it to generate the rest." -Brandon S, SOC Prof*
 
 ## Qualitative research: how do you use ChatGPT in your work?
 
